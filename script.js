@@ -12,6 +12,9 @@ function handleNoClick() {
   const noButton = document.querySelector('.no-button');
   const yesButton = document.querySelector('.yes-button');
 
+function handleYesClick() {
+  window.location.href = "yes_page.html";
+}
   noButton.textContent = messages[messageIndex];
   messageIndex = (messageIndex + 1) % messages.length;
 
@@ -30,7 +33,6 @@ function handleNoClick() {
 function handleYesClick() {
   alert("Sabía que dirías que sí 💖");
 }
- function handleYesClick() {
-  window.location.href = "yes_page.html";
-}
+ 
+
 
