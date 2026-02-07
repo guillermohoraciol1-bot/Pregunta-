@@ -1,20 +1,16 @@
 let messageIndex = 0;
 
 const messages = [
-  "¿Segura? 😐",
-  "Piénsalo mejor 🥺",
-  "No seas así 😭",
-  "Ándale di que sí 💔",
-  "Última oportunidad 😳"
+  "¿Segura? 🥺",
+  "Piénsalo bien 😅",
+  "Prometo que será divertido 💫",
+  "Ok… última oportunidad 😳"
 ];
 
 function handleNoClick() {
-  const noButton = document.querySelector('.no-button');
-  const yesButton = document.querySelector('.yes-button');
+  const noButton = document.querySelector(".no-button");
+  const yesButton = document.querySelector(".yes-button");
 
-function handleYesClick() {
-  window.location.href = "yes_page.html";
-}
   noButton.textContent = messages[messageIndex];
   messageIndex = (messageIndex + 1) % messages.length;
 
@@ -30,9 +26,23 @@ function handleYesClick() {
   }, 200);
 }
 
+/* Corazones al pasar el mouse */
+const yesButton = document.querySelector(".yes-button");
+
+yesButton.addEventListener("mouseenter", () => {
+  const heart = document.createElement("div");
+  heart.textContent = "💖";
+  heart.style.position = "absolute";
+  heart.style.fontSize = "24px";
+  heart.style.left = yesButton.offsetLeft + Math.random() * 60 + "px";
+  heart.style.top = yesButton.offsetTop - 10 + "px";
+  heart.style.animation = "floatUp 1.5s ease forwards";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 1500);
+});
+
 function handleYesClick() {
-  alert("Sabía que dirías que sí 💖");
+  window.location.href = "yes_page.html";
 }
- 
-
-
