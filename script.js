@@ -30,4 +30,7 @@ function handleNoClick() {
 function handleYesClick() {
   alert("Sabía que dirías que sí 💖");
 }
+ function handleYesClick() {
+  window.location.href = "yes_page.html";
+}
 
