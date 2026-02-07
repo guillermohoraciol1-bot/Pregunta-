@@ -1,7 +1,7 @@
 let messageIndex = 0;
 
 const messages = [
-  "¿Seguro? 😐",
+  "¿Segura? 😐",
   "Piénsalo mejor 🥺",
   "No seas así 😭",
   "Ándale di que sí 💔",
@@ -30,3 +30,4 @@ function handleNoClick() {
 function handleYesClick() {
   alert("Sabía que dirías que sí 💖");
 }
+
